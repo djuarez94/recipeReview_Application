@@ -29,9 +29,9 @@ include('header.php');
     <form method="post" action="" id="">
 		<ul>
 			<li>
-				<label for="question"><?php echo $slide['itemRecipeQuestion']; ?></label>
+				<label class ="question" for="answer"><?php echo $slide['itemRecipeQuestion1']; ?></label>
 				</br>
-				<input type="text" name="question"  value="" placeholder="Answer question here" />
+				<input type="text" name="answer"  value="" placeholder="Answer question here" />
 			</li>
 				</br>
 				<input type="submit" name="submit" value="Submit Answers">
@@ -40,23 +40,32 @@ include('header.php');
 	</form>
 
     <?php
-    if ($conn2 = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+    if ($conn2 = mysqli_connect('localhost', 'root', 'root', 'cookCheck')) {
+//checks to see if user clicks the submit button
+        if (isset($_POST['submit']) && trim($_POST['submit']) != "") {
+            echo "User clicked on submit button <br>";
+//if user clicks the submit button and the user did input something the following code runs
+            if (isset($_POST['answer']) && trim($_POST['answer']) != "") {
+                echo "Hello <br>";
+                $userAnswer = $_POST['answer'];
+                echo "User answer: " . $userAnswer;
 
-        if (isset($_POST['submit']) && trim($_POST['submit']) != ""):
-    	if (isset($_POST['question']) != $userArray['itemRecipeQuestion']):
+             $sql ="SELECT * FROM mealRecipes WHERE id = 1";
 
-    		$question = $_POST['question'];
+             $result = mysqli_query($conn, $sql);
 
-    		$recipeQuestions = "SELECT * FROM mealRecipes WHERE itemRecipeQuestion = ".  $question;
-             $result = mysqli_query($conn2, $recipeQuestions);
+             $slide = mysqli_fetch_assoc($result);
 
-    		//Get the first instance of the user and store it into an array
-    		$userArray = mysqli_fetch_assoc($result);
+             echo "<br> Answer from the table is: " . $slide['answer1'];
 
-
-    		if ($userArray != $question):
-    			die("<h4 style='color: red; padding-top: 2%; padding-left: 1%; padding-right: 1%;' class='text-center'>That is not the right answer to $question.");
-
+                if ($userAnswer != $slide['answer1']) {
+                    die("<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Sorry $userAnswer is not the right answer...<h4>");
+                } else {
+                    echo "<br>That is correct!";
+                }
+            }
+        }
+    }
 
      ?>
 </article>
