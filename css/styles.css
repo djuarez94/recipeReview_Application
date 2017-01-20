@@ -1,9 +1,13 @@
+body {
+	background-color: #c3e7e4;
+}
+
 .container {
 	width: 80%;
 	margin: auto;
-	background-color: #c3e7e4;
+	background-color: #fff;
 	padding: 1em;
-	 box-shadow: 0px 2px 4px #0c3737;
+	 box-shadow: 0px 3px 3px #0c3737;
 }
 
 header {
@@ -13,7 +17,7 @@ header {
 	padding-top: .25em;
 	font-size: 2em;
 	font-family: sans-serif;
-	background-color: #fff;
+	background-color: #c3e7e4;
 	color: #fa7619;
 }
 
@@ -46,19 +50,43 @@ h2 {
 	padding-left: 10px;
 }
 
-/*.backButton {
+.backButton {
 	position: absolute;
 	text-decoration: none;
 }
 
 .testButton {
-	color: red;
-}*/
+	float: right;
+	color: #fff;
+	background-color: #7d9895;
+	padding: 10px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+.testButton:hover {
+	color: #7d9895;
+	background-color: #fff;
+}
 
 i {
+	float: right;
 	color: #fff;
+	background-color: #7d9895;
+	padding: 10px;
+	border-radius: 10px;
+	text-decoration: none;
+	font-family: sans-serif;
 }
 
 i:hover {
 	color: #7d9895;
+	background-color: #fff;
 }
+
+nav {
+	background-color: red;
+	display: block;
+}
+

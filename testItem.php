@@ -3,8 +3,6 @@ include('header.php');
 ?>
 
 <article>
-    <h1>Test Item</h1>
-
     <?php
         if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
 
@@ -19,7 +17,7 @@ include('header.php');
 
      ?>
 
-    <a href="recipeProfile.php?id=<?php echo $slide['id']; ?>"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+    <a class = "backButton" href="recipeProfile.php?id=<?php echo $slide['id']; ?>"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
 
 
 
