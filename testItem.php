@@ -33,6 +33,11 @@ include('header.php');
 				</br>
 				<input type="text" name="answer"  value="" placeholder="Answer question here" />
 			</li>
+            <li>
+				<label class ="question" for="answer2"><?php echo $slide['itemRecipeQuestion2']; ?></label>
+				</br>
+				<input type="text" name="answer2"  value="" placeholder="Answer question here" />
+			</li>
 				</br>
 				<input type="submit" name="submit" value="Submit Answers">
 
@@ -45,24 +50,36 @@ include('header.php');
         if (isset($_POST['submit']) && trim($_POST['submit']) != "") {
             echo "User clicked on submit button <br>";
 //if user clicks the submit button and the user did input something the following code runs
-            if (isset($_POST['answer']) && trim($_POST['answer']) != "") {
+
+
+            if (isset($_POST['answer']) && isset($_POST['answer2']) && trim($_POST['answer']) != "" && trim($_POST['answer2']) != "") {
                 echo "Hello <br>";
                 $userAnswer = $_POST['answer'];
-                echo "User answer: " . $userAnswer;
+                $userAnswer2 = $_POST['answer2'];
+                echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Question 1 user answer: </h4>" . $userAnswer;
+                echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Question 2 user answer: </h4>" . $userAnswer2;
 
-             $sql ="SELECT * FROM mealRecipes WHERE id = 1";
+             $sql ="SELECT * FROM mealRecipes WHERE id =" . $id;
 
              $result = mysqli_query($conn, $sql);
 
              $slide = mysqli_fetch_assoc($result);
 
-             echo "<br> Answer from the table is: " . $slide['answer1'];
+             echo "<br>Question 1 answer from the table is: " . $slide['answer1'];
+             echo "<br>Question 2 answer from the table is: " . $slide['answer2'];
 
                 if ($userAnswer != $slide['answer1']) {
-                    die("<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Sorry $userAnswer is not the right answer...<h4>");
+                    echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Sorry $userAnswer is not the right answer for question 1...</h4>";
                 } else {
                     echo "<br>That is correct!";
                 }
+
+                if ($userAnswer2 != $slide['answer2']) {
+                    echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Sorry $userAnswer2 is not the right answer for question 2...</h4>";
+                } else {
+                    echo "<br>That is correct!";
+                }
+
             }
         }
     }
