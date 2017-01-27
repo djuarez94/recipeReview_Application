@@ -2,7 +2,6 @@
 include('header.php');
 ?>
 
-<article>
     <?php
         if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
 
@@ -24,7 +23,8 @@ include('header.php');
     <img src="<?php echo $slide['imgUrl']; ?>">
     <h2><?php echo $slide['recipeName']; ?></h2>
 
-    <form method="post" action="" id="">
+    <form class="recipe" method="post" action="" id="">
+        <h2>Test</h2>
 		<ul>
 			<li>
 				<label class ="question" for="answer"><?php echo $slide['itemRecipeQuestion1']; ?></label>
@@ -83,7 +83,6 @@ include('header.php');
     }
 
      ?>
-</article>
 <?php
 endif;
 ?>

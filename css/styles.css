@@ -18,7 +18,7 @@ header {
 	font-size: 2em;
 	font-family: sans-serif;
 	background-color: #c3e7e4;
-	color: #fa7619;
+	color: #596d6c;
 }
 
 footer {
@@ -30,6 +30,7 @@ img {
 	width: 300px;
 	padding: 10px;
 	border-radius: 50%;
+	border: solid 5px #7d9895;
 }
 
 img:hover {
@@ -52,11 +53,14 @@ h2 {
 
 .backButton {
 	position: absolute;
+	left: 1%;
 	text-decoration: none;
+	font-size: .8em;
 }
 
 .testButton {
-	float: right;
+	position: absolute;
+	right: 1%;
 	color: #fff;
 	background-color: #7d9895;
 	padding: 10px;
@@ -89,4 +93,48 @@ nav {
 	background-color: red;
 	display: block;
 }
+
+.nav1 {
+	position: relative;
+}
+
+table {
+	padding: 10px;
+}
+
+tr.turqoise {
+	background-color: #99b9b7;
+}
+
+th {
+	text-align: left;
+}
+
+td {
+	width: 500px;
+}
+
+.recipe {
+	background-color: #bae2dd;
+	padding: 2px;
+	margin-top: 15px;
+}
+
+.search-form {
+	
+	text-align: right;
+}
+
+.search {
+	width: 25%;
+	padding: 10px;
+	font-size: 1em;
+	border: 3px solid #7d9895;
+	text-align: center;
+}
+
+
+
+
+
 

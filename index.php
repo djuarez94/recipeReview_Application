@@ -1,6 +1,13 @@
 <?php
 include('header.php');
 ?>
+<form class="search-form">
+    <input type="text" class="search" placeholder="Search Item Recipe">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
 <div class="list">
 	<?php
 			if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
