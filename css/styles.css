@@ -121,7 +121,7 @@ td {
 }
 
 .search-form {
-	
+
 	text-align: right;
 }
 
@@ -131,6 +131,26 @@ td {
 	font-size: 1em;
 	border: 3px solid #7d9895;
 	text-align: center;
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 72.6%;
+  /*perspective:20px;*/
+}
+.suggestions li {
+  background:white;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin:0;
+  padding: 10px;
+  transition:background 0.2s;
+  width: 25%;
+  justify-content:space-between;
+  text-transform: capitalize;
 }
 
 
