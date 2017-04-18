@@ -86,20 +86,35 @@ i {
   height: 20px;
 }
 
-.recipeItem {
-  margin: auto;
-  padding: 30px 10px 10px 10px;
-}
-
 .item {
   background-color: red;
   margin-right: 180px;
   padding: 10px;
-  display: inline;
+  text-align: center;
+  display: block;
 }
 
-.itemImg {
-  border-radius: 100%;
+.itemGallery {
+  margin-top: 1.5em;
+}
+
+div.recipeItem {
+    margin: 5px;
+    float: left;
+    width: 180px;
+    padding-top: 10px;
+}
+
+div.recipeItem img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 100%;
+}
+
+div.title {
+    padding: 15px;
+    text-align: center;
 }
 
 

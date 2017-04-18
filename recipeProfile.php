@@ -13,29 +13,7 @@
 					<img class="logo" src="img/cookCheckLoogo_70px.png">
 				</a>
 			</header>
-			<div class="search">
-				<h1 class="positionName">Salad PrepCook</h1>
-				<i class="fa fa-search" aria-hidden="true"></i>
-				<input class="searchPos" type="text" name="" value="">
-			</div>
-			<div class="recipeItem">
-				<div class="item">
-					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
-					<p>Breaded Zuchinni</p>
-				</div>
-				<div class="item">
-					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
-					<p>Breaded Zuchinni</p>
-				</div>
-				<div class="item">
-					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
-					<p>Breaded Zuchinni</p>
-				</div>
-				<div class="item">
-					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
-					<p>Breaded Zuchinni</p>
-				</div>
-			</div>
+
 		</div>
 
 	</body>

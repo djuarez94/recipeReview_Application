@@ -14,7 +14,7 @@
 			</header>
 				<div class="positions">
 					<nav>
-						<a href="recipeProfile.php">Salads</a>
+						<a href="recipes.php">Salads</a>
 						<a href="#">Slicer</a>
 						<a href="#">Oven</a>
 						<a href="#">Production</a>
