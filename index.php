@@ -10,27 +10,15 @@
 			<header>Logo</header>
 				<div class="positions">
 					<nav>
-						<ul>
-							<li>
-								<a href="#">Salads</a>
-							</li>
-							<li>
-								<a href="#">Slicer</a>
-							</li>
-							<li>
-								<a href="#">Oven</a>
-							</li>
-							<li>
-								<a href="#">Production</a>
-							</li>
-							<li>
-								<a href="#">Salsa</a>
-							</li>
-						</ul>
+						<a href="#">Salads</a>
+						<a href="#">Slicer</a>
+						<a href="#">Oven</a>
+						<a href="#">Production</a>
+						<a href="#">Salsa</a>
 					</nav>
 				</div>
 				<div class="copyright">
-					<p>	&copy; <?php echo date('Y'); ?> Recipe Viewer. All rights reserved.</p>
+					<p>	&copy; <?php echo date('Y'); ?> Recipe Viewer.<br> All rights reserved.</p>
 				</div>
 		</div>
 
