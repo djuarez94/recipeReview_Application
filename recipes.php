@@ -21,7 +21,7 @@
 
 			<div class="itemGallery">
 				<div class="recipeItem">
-					<a target="_blank" href="recipeProfile.php">
+					<a href="recipeProfile.php">
 	    				<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
 	  				</a>
 		  			<div class="title">
