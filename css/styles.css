@@ -1,6 +1,10 @@
 body {
     background-color: #d7ede6;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
 }
+
 header {
     background-color: #049b89;
     text-align: center;
@@ -8,12 +12,20 @@ header {
     line-height: 95px;
 }
 
+img.logo {
+  padding-top: 14px;
+}
+
+img.logo:hover {
+  opacity: .8;
+}
+
 .positions {
     background-color: #fff;
     display: block;
     text-align: center;
     margin: 60px 20px 50px 20px;
-    box-shadow: 0px 3px 2px #049b89;;
+    box-shadow: 0px 3px 2px #049b89;
 }
 
 .positions a {
@@ -26,6 +38,12 @@ header {
     font-size: 1.5em;
     color: #049b89;
 
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+
+  transition: .5s;
 }
 
 .positions a:hover {
@@ -38,3 +56,50 @@ header {
     text-align: center;
     color: #049b89;
 }
+
+/*-------------------------------------
+| recipeProfile CSS
+-------------------------------------*/
+.search {
+  background-color: #fff;
+  margin-top: 0px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 55px;
+  box-shadow: 0px 3px 2px #049b89;
+}
+
+i {
+  color: #049b89;
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+
+.positionName {
+  color:#049b89;
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+.searchPos {
+  width: 70%;
+  height: 20px;
+}
+
+.recipeItem {
+  margin: auto;
+  padding: 30px 10px 10px 10px;
+}
+
+.item {
+  background-color: red;
+  margin-right: 180px;
+  padding: 10px;
+  display: inline;
+}
+
+.itemImg {
+  border-radius: 100%;
+}
+
+

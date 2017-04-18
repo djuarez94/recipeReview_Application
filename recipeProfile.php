@@ -1,58 +1,42 @@
-<?php
-include('header.php');
-?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Recipe Viewer</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<a href="index.php">
+					<img class="logo" src="img/cookCheckLoogo_70px.png">
+				</a>
+			</header>
+			<div class="search">
+				<h1 class="positionName">Salad PrepCook</h1>
+				<i class="fa fa-search" aria-hidden="true"></i>
+				<input class="searchPos" type="text" name="" value="">
+			</div>
+			<div class="recipeItem">
+				<div class="item">
+					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+					<p>Breaded Zuchinni</p>
+				</div>
+				<div class="item">
+					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+					<p>Breaded Zuchinni</p>
+				</div>
+				<div class="item">
+					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+					<p>Breaded Zuchinni</p>
+				</div>
+				<div class="item">
+					<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+					<p>Breaded Zuchinni</p>
+				</div>
+			</div>
+		</div>
 
-<div class="recipeProfile">
-<?php
-    if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
-
-        $id = 1;
-        if (isset($_GET['id'])) {$id = $_GET['id'];}
-        //run the query
-         $sql ="SELECT * FROM mealRecipes WHERE id = " . $id;
-
-         $result = mysqli_query($conn, $sql);
-
-         $slide = mysqli_fetch_assoc($result);
- ?>
-		<nav>
-		    <a class = "backButton" href="index.php"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
-		    <a class = "testButton" href="testItem.php?id=<?php echo $slide['id']; ?>">Take Test</a>
-		</nav>
-
-		    <img src="<?php echo $slide['imgUrl']; ?>">
-		    <h2><?php echo $slide['recipeName']; ?></h2>
-		    <div class="text"><?php echo $slide['recipeDescr']; ?></div>
-</div>
-<div class="recipe">
-	<table>
-		<h2>Recipe</h2>
-		<tbody>
-			<tr>
-				<th>Ingredient</th>
-				<th>Measurement</th>
-			</tr>
-			<tr class="turqoise">
-				<td>Salt</td>
-				<td>1 Tbls</td>
-			</tr>
-			<tr class="">
-				<td>Black Pepper</td>
-				<td>1 Tsp</td>
-			</tr>
-			<tr class="turqoise">
-				<td>Salt</td>
-				<td>1 Tbls</td>
-			</tr>
-			<tr class="">
-				<td>Black Pepper</td>
-				<td>1 Tsp</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-
-<?php
-endif;
-?>
-<?php include('footer.php'); ?>
+	</body>
+</html>

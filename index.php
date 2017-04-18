@@ -7,10 +7,14 @@
 	</head>
 	<body>
 		<div class="container">
-			<header>Logo</header>
+			<header>
+				<a href="index.php">
+					<img class="logo" src="img/cookCheckLoogo_70px.png">
+				</a>
+			</header>
 				<div class="positions">
 					<nav>
-						<a href="#">Salads</a>
+						<a href="recipeProfile.php">Salads</a>
 						<a href="#">Slicer</a>
 						<a href="#">Oven</a>
 						<a href="#">Production</a>
