@@ -17,11 +17,82 @@
 				<div class="miniNav">
 					<nav class="buttonNav" aria-label="...">
 					  <ul class="pager">
-					    <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span>Back</a></li>
+					    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span>Back</a></li>
 						<li class="miniHeader">Item Profile</li>
 					    <li class="next"><a href="#">Test<span aria-hidden="true">&rarr;</span></a></li>
 					  </ul>
 					</nav>
+				</div>
+				<div class="recipe">
+					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
+					<!-- <div class="ingredients">
+						<i id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
+						<p id="ingredient">Breaded Zuchinni</p>
+						<p id="measurement">10 Pieces</p>
+					</div>
+					<div id="procedure">
+						This is the procedure text.
+					</div> -->
+				</div>
+
+				<div class="recipeTable">
+				    <div class="child">
+				        <div class="ingredient">
+				        	<i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
+				        </div>
+				    </div>
+				    <div class="child">
+				        <div class="ingredient">
+				        	<p>Breaded Zuchinni</p>
+				        </div>
+				    </div>
+				    <div class="child">
+				        <div class="ingredient">
+				        	<p id="measurement">10 Pieces</p>
+				        </div>
+				    </div>
+				</div>
+				<div id="procedure">
+					This is the procedure text.
+				</div>
+				<div class="recipeTable">
+				    <div class="child">
+				        <div class="ingredient">
+				        	<i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
+				        </div>
+				    </div>
+				    <div class="child">
+				        <div class="ingredient">
+				        	<p>Breaded Zuchinni</p>
+				        </div>
+				    </div>
+				    <div class="child">
+				        <div class="ingredient">
+				        	<p id="measurement">10 Pieces</p>
+				        </div>
+				    </div>
+				</div>
+				<div id="procedure">
+					This is the procedure text.
+				</div><div class="recipeTable">
+				    <div class="child">
+				        <div class="ingredient">
+				        	<i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
+				        </div>
+				    </div>
+				    <div class="child">
+				        <div class="ingredient">
+				        	<p>Breaded Zuchinni</p>
+				        </div>
+				    </div>
+				    <div class="child">
+				        <div class="ingredient">
+				        	<p id="measurement">10 Pieces</p>
+				        </div>
+				    </div>
+				</div>
+				<div id="procedure">
+					This is the procedure text.
 				</div>
 
 
