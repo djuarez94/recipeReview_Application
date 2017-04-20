@@ -1,89 +1,61 @@
-<?php
-include('header.php');
-?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Recipe Viewer</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body>
+			<header>
+				<a href="index.php">
+					<img class="logo" src="img/cookCheckLoogo_70px.png">
+				</a>
+			</header>
+			<div class="container-fluid">
+				<div class="miniNav">
+					<nav class="buttonNav" aria-label="...">
+					  <ul class="pager">
+					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+						<li class="miniHeader">Breaded Zuchinni</li>
+					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php"><img src="img/timer_icon_21px.png" alt=""></a></li>
+					  </ul>
+					</nav>
+					<div class="timer">
+						<h2>12:50</h2>
+					</div>
+				</div>
+				<div class="recipe">
+					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
+				</div>
+				<div class="test">
+					<form class="" action="index.html" method="post">
+						<ol>
+							<li class="questionBlock">
+								<p id="question">How many cups of buttermilk do you use?</p>
+								<input class="userAnswer" type="text" name="" value="">
+							</li>
+							<li class="questionBlock">
+								<p id="question">How many cups of buttermilk do you use?</p>
+								<input class="userAnswer" type="text" name="" value="">
+							</li>
+							<li class="questionBlock">
+								<p id="question">How many cups of buttermilk do you use?</p>
+								<input class="userAnswer" type="text" name="" value="">
+							</li>
+							<li class="questionBlock">
+								<p id="question">How many cups of buttermilk do you use?</p>
+								<input class="userAnswer" type="text" name="" value="">
+							</li>
+						</ol>
+						<input id="submit" type="submit" name="submit" value="Submit">
+					</form>
+				</div>
 
-    <?php
-        if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
-
-            $id = 1;
-            if (isset($_GET['id'])) {$id = $_GET['id'];}
-            //run the query
-             $sql ="SELECT * FROM mealRecipes WHERE id = " . $id;
-
-             $result = mysqli_query($conn, $sql);
-
-             $slide = mysqli_fetch_assoc($result);
-
-     ?>
-
-    <a class = "backButton" href="recipeProfile.php?id=<?php echo $slide['id']; ?>"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
 
 
 
-    <img src="<?php echo $slide['imgUrl']; ?>">
-    <h2><?php echo $slide['recipeName']; ?></h2>
-
-    <form class="recipe" method="post" action="" id="">
-        <h2>Test</h2>
-		<ul>
-			<li>
-				<label class ="question" for="answer"><?php echo $slide['itemRecipeQuestion1']; ?></label>
-				</br>
-				<input type="text" name="answer"  value="" placeholder="Answer question here" />
-			</li>
-            <li>
-				<label class ="question" for="answer2"><?php echo $slide['itemRecipeQuestion2']; ?></label>
-				</br>
-				<input type="text" name="answer2"  value="" placeholder="Answer question here" />
-			</li>
-				</br>
-				<input type="submit" name="submit" value="Submit Answers">
-
-		</ul>
-	</form>
-
-    <?php
-    if ($conn2 = mysqli_connect('localhost', 'root', 'root', 'cookCheck')) {
-//checks to see if user clicks the submit button
-        if (isset($_POST['submit']) && trim($_POST['submit']) != "") {
-            echo "User clicked on submit button <br>";
-//if user clicks the submit button and the user did input something the following code runs
-
-
-            if (isset($_POST['answer']) && isset($_POST['answer2']) && trim($_POST['answer']) != "" && trim($_POST['answer2']) != "") {
-                echo "Hello <br>";
-                $userAnswer = $_POST['answer'];
-                $userAnswer2 = $_POST['answer2'];
-                echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Question 1 user answer: </h4>" . $userAnswer;
-                echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Question 2 user answer: </h4>" . $userAnswer2;
-
-             $sql ="SELECT * FROM mealRecipes WHERE id =" . $id;
-
-             $result = mysqli_query($conn, $sql);
-
-             $slide = mysqli_fetch_assoc($result);
-
-             echo "<br>Question 1 answer from the table is: " . $slide['answer1'];
-             echo "<br>Question 2 answer from the table is: " . $slide['answer2'];
-
-                if ($userAnswer != $slide['answer1']) {
-                    echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Sorry $userAnswer is not the right answer for question 1...</h4>";
-                } else {
-                    echo "<br>That is correct!";
-                }
-
-                if ($userAnswer2 != $slide['answer2']) {
-                    echo "<h4 style='color: red; padding-left: 1%; padding-right: 1%;' class='text-center'>Sorry $userAnswer2 is not the right answer for question 2...</h4>";
-                } else {
-                    echo "<br>That is correct!";
-                }
-
-            }
-        }
-    }
-
-     ?>
-<?php
-endif;
-?>
-<?php include('footer.php'); ?>
+			</div>
+	</body>
+</html>

@@ -20,7 +20,7 @@
 					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i>
 </a></li>
 						<li class="miniHeader">Item Profile</li>
-					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="#">Test</a></li>
+					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php">Test</a></li>
 					  </ul>
 					</nav>
 				</div>
