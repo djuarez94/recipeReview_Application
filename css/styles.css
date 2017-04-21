@@ -110,6 +110,7 @@
 
   div.recipeItem {
       margin: 5px;
+      text-align: center;
       float: left;
       width: 180px;
       padding-top: 10px;
@@ -117,14 +118,14 @@
 
   div.recipeItem img {
       height: auto;
-      width: 175px;
+      width: 155px;
 
       border-radius: 100%;
   }
 
   div.title {
       padding: 15px;
-      font-size: 1.2em;
+      font-size: 1em;
       color: #049b89;
       text-align: center;
   }
