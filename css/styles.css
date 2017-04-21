@@ -20,7 +20,7 @@ header {
 }
 
 img.logo {
-  padding-top: 14px;
+  padding-top: 24px;
 }
 
 img.logo:hover {
@@ -37,8 +37,8 @@ img.logo:hover {
 
 .positions a {
     display: block;
-    height: 80px;
-    line-height: 80px;
+    height: 130px;
+    line-height: 130px;
     border-bottom: solid 2px #d7ede6;
     text-decoration: none;
     font-family: sans-serif;
