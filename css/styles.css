@@ -112,13 +112,13 @@
       margin: 5px;
       text-align: center;
       float: left;
-      width: 180px;
+      width: 160px;
       padding-top: 10px;
   }
 
   div.recipeItem img {
       height: auto;
-      width: 145px;
+      width: 155px;
 
       border-radius: 100%;
   }
