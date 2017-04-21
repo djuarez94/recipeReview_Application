@@ -72,8 +72,8 @@ img.logo:hover {
   background-color: #fff;
   margin-top: 0px;
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 55px;
+  padding-top: 55px;
+  padding-bottom: 75px;
   box-shadow: 0px 3px 2px #049b89;
 }
 
@@ -86,21 +86,22 @@ i {
 .positionName {
   color:#049b89;
   font-family: sans-serif;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .searchPos {
   width: 70%;
-  height: 20px;
+  height: 50px;
+  font-size: 2em;
 }
 
-.item {
+/*.item {
   background-color: red;
   margin-right: 180px;
   padding: 10px;
   text-align: center;
   display: block;
-}
+}*/
 
 .itemGallery {
   margin-top: 1.5em;
@@ -116,12 +117,15 @@ div.recipeItem {
 div.recipeItem img {
     width: 100%;
     height: auto;
+    width: 200px;
 
     border-radius: 100%;
 }
 
 div.title {
     padding: 15px;
+    font-size: 2em;
+    color: #049b89;
     text-align: center;
 }
 

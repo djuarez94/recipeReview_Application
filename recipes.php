@@ -15,14 +15,14 @@
 			</header>
 			<div class="search">
 				<h1 class="positionName">Salad PrepCook</h1>
-				<i class="fa fa-search" aria-hidden="true"></i>
+				<i style="font-size: 2em;" class="fa fa-search" aria-hidden="true"></i>
 				<input class="searchPos" type="text" name="" value="">
 			</div>
 
 			<div class="itemGallery">
 				<div class="recipeItem">
 					<a href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+	    				<img class="itemImg" src="img/zuchini_PH.jpg">
 	  				</a>
 		  			<div class="title">
 						<p>Breaded Zuchinni</p>
@@ -30,7 +30,7 @@
 				</div>
 				<div class="recipeItem">
 					<a target="_blank" href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+	    				<img class="itemImg" src="img/zuchini_PH.jpg">
 	  				</a>
 		  			<div class="title">
 						<p>Breaded Zuchinni</p>
@@ -38,7 +38,7 @@
 				</div>
 				<div class="recipeItem">
 					<a target="_blank" href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+	    				<img class="itemImg" src="img/zuchini_PH.jpg">
 	  				</a>
 		  			<div class="title">
 						<p>Breaded Zuchinni</p>
@@ -46,7 +46,7 @@
 				</div>
 				<div class="recipeItem">
 					<a target="_blank" href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg" width="170px">
+	    				<img class="itemImg" src="img/zuchini_PH.jpg">
 	  				</a>
 		  			<div class="title">
 						<p>Breaded Zuchinni</p>
