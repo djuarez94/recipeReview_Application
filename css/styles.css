@@ -72,8 +72,8 @@
     background-color: #fff;
     margin-top: 0px;
     text-align: center;
-    padding-top: 55px;
-    padding-bottom: 75px;
+    padding-top: 25px;
+    padding-bottom: 55px;
     box-shadow: 0px 3px 2px #049b89;
   }
 
@@ -86,12 +86,12 @@
   .positionName {
     color:#049b89;
     font-family: sans-serif;
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .searchPos {
     width: 70%;
-    height: 50px;
+    height: 30px;
     font-size: 2em;
   }
 
@@ -113,20 +113,18 @@
       float: left;
       width: 180px;
       padding-top: 10px;
-      margin-left: 8em;
-      margin-right: 8em;
   }
 
   div.recipeItem img {
       height: auto;
-      width: 300px;
+      width: 100%;
 
       border-radius: 100%;
   }
 
   div.title {
       padding: 15px;
-      font-size: 2.5em;
+      font-size: 1.5em;
       color: #049b89;
       text-align: center;
   }
