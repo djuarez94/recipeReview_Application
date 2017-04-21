@@ -112,19 +112,20 @@ div.recipeItem {
     float: left;
     width: 180px;
     padding-top: 10px;
+    margin-left: 8em;
+    margin-right: 8em;
 }
 
 div.recipeItem img {
-    width: 100%;
     height: auto;
-    width: 200px;
+    width: 300px;
 
     border-radius: 100%;
 }
 
 div.title {
     padding: 15px;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #049b89;
     text-align: center;
 }
