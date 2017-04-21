@@ -37,12 +37,12 @@ img.logo:hover {
 
 .positions a {
     display: block;
-    height: 130px;
+    height: 180px;
     line-height: 130px;
     border-bottom: solid 2px #d7ede6;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 1.5em;
+    font-size: 3em;
     color: #049b89;
 
   -o-transition:.5s;
