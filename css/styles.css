@@ -15,12 +15,12 @@
   header {
       background-color: #049b89;
       text-align: center;
-      height: 200px;
+      height: 100px;
       line-height: 95px;
   }
 
   img.logo {
-    padding-top: 24px;
+    padding-top: 13px;
   }
 
   img.logo:hover {
@@ -31,18 +31,18 @@
       background-color: #fff;
       display: block;
       text-align: center;
-      margin: 90px 20px 50px 20px;
+      margin: 65px 20px 20px 20px;
       box-shadow: 0px 3px 2px #049b89;
   }
 
   .positions a {
       display: block;
-      height: 180px;
-      line-height: 175px;
+      height: 90px;
+      line-height: 90px;
       border-bottom: solid 2px #d7ede6;
       text-decoration: none;
       font-family: sans-serif;
-      font-size: 3em;
+      font-size: 1.5em;
       color: #049b89;
 
     -o-transition:.5s;
@@ -62,7 +62,7 @@
   .copyright {
       text-align: center;
       color: #049b89;
-      font-size: 1.5em;
+      font-size: 1em;
   }
 
   /*-------------------------------------
