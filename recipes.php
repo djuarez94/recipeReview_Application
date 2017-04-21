@@ -10,7 +10,7 @@
 		<div class="container">
 			<header>
 				<a href="index.php">
-					<img class="logo" src="img/cookCheckLoogo_70px.png">
+					<img class="logo" src="img/cookCheckLoogo_175px.png">
 				</a>
 			</header>
 			<div class="search">
