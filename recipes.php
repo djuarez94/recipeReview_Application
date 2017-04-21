@@ -20,7 +20,7 @@
 				<input class="searchPos" type="text" name="" value="">
 			</div>
 
-			<!-- <div class="itemGallery"> -->
+			<div class="itemGallery">
 				<div class="recipeItem">
 					<a href="recipeProfile.php">
 	    				<img class="itemImg" src="img/zuchini_PH.jpg">
