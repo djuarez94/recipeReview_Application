@@ -243,6 +243,7 @@
 
   .timer {
     display: block;
+	display: none;
     text-align: center;
     color: #049b89;
   }

@@ -20,11 +20,12 @@
 					  <ul class="pager">
 					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
 						<li class="miniHeader">Breaded Zuchinni</li>
-					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php"><img src="img/timer_icon_21px.png" alt=""></a></li>
+					    <li class="next"><a class="timeButton" style="padding-left:19px; padding-right:19px;"href="#"><img src="img/timer_icon_21px.png" alt=""></a></li>
 					  </ul>
 					</nav>
-					<div class="timer">
-						<h2>12:50</h2>
+					<div id="timer" class="timer">
+						<p id="p1">This is a paragraph.</p>
+						<!-- <h2>12:50</h2> -->
 					</div>
 				</div>
 				<div class="recipe">
@@ -53,10 +54,8 @@
 						<input id="submit" type="submit" name="submit" value="Submit">
 					</form>
 				</div>
-
-
-
-
 			</div>
 	</body>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/script.js"></script>
 </html>
