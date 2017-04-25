@@ -23,10 +23,20 @@
 					    <li class="next"><a class="timeButton" style="padding-left:19px; padding-right:19px;"href="#"><img src="img/timer_icon_21px.png" alt=""></a></li>
 					  </ul>
 					</nav>
-					<div id="timer" class="timer">
-						<p id="p1">This is a paragraph.</p>
-						<!-- <h2>12:50</h2> -->
-					</div>
+					<div class="timer">
+				      <div class="timer__controls">
+				        <button data-time="600" class="timer_button">Quick 10</button>
+				        <button data-time="1200" class="timer_button">Study 20</button>
+				        <button data-time="1800" class="timer_button">Lunch Break</button>
+				        <form name="customForm" id="custom">
+				          <input type="text" name="minutes" placeholder="Enter Minutes">
+				        </form>
+				      </div>
+				      <div class="display">
+				        <h1 class="display__time-left"></h1>
+				        <p class="display__end-time"></p>
+				      </div>
+				    </div>
 				</div>
 				<div class="recipe">
 					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
@@ -56,6 +66,6 @@
 				</div>
 			</div>
 	</body>
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/script.js"></script>
 </html>
