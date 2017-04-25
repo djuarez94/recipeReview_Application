@@ -255,6 +255,10 @@
     padding: 10px;
   }
 
+  a.timeButtonClicked {
+    background-color: red;
+  }
+
   ol li {
     color: #049b89;
   }

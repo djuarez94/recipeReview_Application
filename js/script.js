@@ -61,7 +61,8 @@ $(document).ready(function() {
 //shows timer buttons on click
 	$('a.timeButton').click(function() {
 		// $(".miniNav").removeClass('miniNavTime');
-		 $(".miniNav").addClass('miniNavTime3');
+		 $(".miniNav").toggleClass('miniNavTime');
+
 		//  $(".miniNav").removeClass('miniNavTime');
 
 		 $("div.timer").fadeToggle();
@@ -80,7 +81,6 @@ $(document).ready(function() {
 	});
 
 	$('button.timer_button').click(function(){
-		$(".miniNav").removeClass('miniNavTime3');
 		$(".miniNav").addClass('miniNavTime');
 		$("div.display").show();
 	});
