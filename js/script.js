@@ -85,8 +85,13 @@ $(document).ready(function() {
 		$("div.display").show();
 	});
 
-//hides and shows timer display on button click
-
+/*-------------------------------------
+| Accordion Recipe Viewer
+-------------------------------------*/
+// $(".collapse").collapse();
+// $('#accordion').collapse({hide: true})
+$('.panel-collapse.in')
+   .collapse('hide');
 
 
 

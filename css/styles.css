@@ -227,9 +227,12 @@
   .recipeTable {
       width: 100%; /* Try setting this to 400px or something */
       display: table;
-      background-color: #d7ede6;
-      border-bottom: solid 1px #049b89;
   }
+
+  .panel-heading {
+    background-color: #d7ede6 !important;
+  }
+
   .child {
       display: table-cell;
   }

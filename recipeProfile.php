@@ -27,79 +27,135 @@
 				</div>
 				<div class="recipe">
 					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
-					<div class="recipeTable">
-					    <div class="child">
-					        <div class="ingredient">
-					        	<i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
-					        </div>
-					    </div>
-					    <div class="child">
-					        <div class="ingredient">
-					        	<p>Breaded Zuchinni</p>
-					        </div>
-					    </div>
-					    <div class="child">
-					        <div class="ingredient">
-					        	<p id="measurement">10 Pieces</p>
-					        </div>
-					    </div>
-					</div>
-					<div id="procedure">
-						This is the procedure text.
-					</div>
-					<div class="recipeTable">
-					    <div class="child">
-					        <div class="ingredient">
-					        	<i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
-					        </div>
-					    </div>
-					    <div class="child">
-					        <div class="ingredient">
-					        	<p>Breaded Zuchinni</p>
-					        </div>
-					    </div>
-					    <div class="child">
-					        <div class="ingredient">
-					        	<p id="measurement">10 Pieces</p>
-					        </div>
-					    </div>
-					</div>
-					<div id="procedure">
-						This is the procedure text.
-					</div><div class="recipeTable">
-					    <div class="child">
-					        <div class="ingredient">
-					        	<i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
-					        </div>
-					    </div>
-					    <div class="child">
-					        <div class="ingredient">
-					        	<p>Breaded Zuchinni</p>
-					        </div>
-					    </div>
-					    <div class="child">
-					        <div class="ingredient">
-					        	<p id="measurement">10 Pieces</p>
-					        </div>
-					    </div>
-					</div>
-					<div id="procedure">
-						This is the procedure text.
-					</div>
-					<!-- <div class="ingredients">
-						<i id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i>
-						<p id="ingredient">Breaded Zuchinni</p>
-						<p id="measurement">10 Pieces</p>
-					</div>
-					<div id="procedure">
-						This is the procedure text.
-					</div> -->
-				</div>
 
-
-
-
-		</div>
+				<div class="panel-group" id="accordion">
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+						<div class="recipeTable">
+							<div class="child">
+								<div class="ingredient">
+									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+								</div>
+							</div>
+							<div class="child">
+								<div class="ingredient">
+									<p>Breaded Zuchinni</p>
+								</div>
+							</div>
+							<div class="child">
+								<div class="ingredient">
+									<p id="measurement">10 Pieces</p>
+								</div>
+							</div>
+						</div>
+				      </div>
+				      <div id="collapse1" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+				        <div class="panel-body">
+							Procedure text goes here
+						</div>
+						</div>
+						<div class="panel-heading">
+  						<div class="recipeTable">
+  							<div class="child">
+  								<div class="ingredient">
+  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p>Breaded Zuchinni</p>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p id="measurement">10 Pieces</p>
+  								</div>
+  							</div>
+  						</div>
+  				      </div>
+  				      <div id="collapse2" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+  				        <div class="panel-body">
+  							Procedure text goes here
+  						</div>
+  						</div>
+						<div class="panel-heading">
+  						<div class="recipeTable">
+  							<div class="child">
+  								<div class="ingredient">
+  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p>Breaded Zuchinni</p>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p id="measurement">10 Pieces</p>
+  								</div>
+  							</div>
+  						</div>
+  				      </div>
+  				      <div id="collapse3" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+  				        <div class="panel-body">
+  							Procedure text goes here
+  						</div>
+  						</div>
+						<div class="panel-heading">
+  						<div class="recipeTable">
+  							<div class="child">
+  								<div class="ingredient">
+  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p>Breaded Zuchinni</p>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p id="measurement">10 Pieces</p>
+  								</div>
+  							</div>
+  						</div>
+  				      </div>
+  				      <div id="collapse4" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+  				        <div class="panel-body">
+  							Procedure text goes here
+  						</div>
+  						</div>
+						<div class="panel-heading">
+  						<div class="recipeTable">
+  							<div class="child">
+  								<div class="ingredient">
+  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p>Breaded Zuchinni</p>
+  								</div>
+  							</div>
+  							<div class="child">
+  								<div class="ingredient">
+  									<p id="measurement">10 Pieces</p>
+  								</div>
+  							</div>
+  						</div>
+  				      </div>
+  				      <div id="collapse5" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+  				        <div class="panel-body">
+  							Procedure text goes here
+  						</div>
+  						</div>
+						<!--Start new panel here-->
+					</div>
+			    </div>
 
 	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
 </html>
