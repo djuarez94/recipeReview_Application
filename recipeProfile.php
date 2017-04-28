@@ -27,7 +27,6 @@
 				</div>
 				<div class="recipe">
 					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
-
 				<div class="panel-group" id="accordion">
 				    <div class="panel panel-default">
 				      <div class="panel-heading">

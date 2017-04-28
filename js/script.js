@@ -85,13 +85,13 @@ $(document).ready(function() {
 		$("div.display").show();
 	});
 
-/*-------------------------------------
-| Accordion Recipe Viewer
--------------------------------------*/
-// $(".collapse").collapse();
-// $('#accordion').collapse({hide: true})
-$('.panel-collapse.in')
-   .collapse('hide');
+
+
+// $('div.ingredient a i').click(function() {
+// 	// $('i').toggleClass('fa fa-sort-asc');
+// 	$('div.ingredient a i').find('i').toggleClass('fa-caret-down fa-sort-asc');
+// });
+
 
 
 
