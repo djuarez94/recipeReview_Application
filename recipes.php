@@ -21,40 +21,39 @@
 			</div>
 
 			<div class="itemGallery">
-				<div class="recipeItem">
-					<a href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg">
-	  				</a>
-		  			<div class="title">
-						<p>Breaded Zuchinni</p>
-					</div>
-				</div>
-				<div class="recipeItem">
-					<a target="_blank" href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg">
-	  				</a>
-		  			<div class="title">
-						<p>Breaded Zuchinni</p>
-					</div>
-				</div>
-				<div class="recipeItem">
-					<a target="_blank" href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg">
-	  				</a>
-		  			<div class="title">
-						<p>Breaded Zuchinni</p>
-					</div>
-				</div>
-				<div class="recipeItem">
-					<a target="_blank" href="recipeProfile.php">
-	    				<img class="itemImg" src="img/zuchini_PH.jpg">
-	  				</a>
-		  			<div class="title">
-						<p>Breaded Zuchinni</p>
-					</div>
-				</div>
-			</div>
 
+					<?php
+							if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+								//run the query
+								 $sql ="SELECT * FROM mealRecipes";
+
+								 $result = mysqli_query($conn, $sql);
+
+								 //loop the results
+								 while ($row = mysqli_fetch_assoc($result)):
+
+						 ?>
+
+						
+						<div class="gallery">
+							<a href="recipeProfile.php?id=<?php echo $row['id']; ?>">
+						    	<img class="itemImg" src="img/zuchini_PH.jpg">
+							</a>
+							<div class="desc">
+								<a href="recipeProfile.php?id=<?php echo $row['id']; ?>">
+									<p><?php echo $row['recipeName'] ?></p>
+								</a></div>
+						</div>
+
+					<?php
+					endwhile;
+				endif;
+				?>
+
+
+
+			</div>
 		</div>
 
 	</body>
