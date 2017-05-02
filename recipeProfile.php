@@ -1,3 +1,16 @@
+<?php
+	if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+		$id = 1;
+		if (isset($_GET['id'])) {$id = $_GET['id'];}
+		//run the query
+		 $sql ="SELECT * FROM mealRecipes WHERE id = " . $id;
+
+		 $result = mysqli_query($conn, $sql);
+
+		 $slide = mysqli_fetch_assoc($result);
+ ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,139 +33,80 @@
 					  <ul class="pager">
 					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i>
 </a></li>
-						<li class="miniHeader">Item Profile</li>
+						<li class="miniHeader"><?php echo $slide['recipeName']; ?></li>
 					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php">Test</a></li>
 					  </ul>
 					</nav>
 				</div>
 				<div class="recipe">
 					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
+
 				<div class="panel-group" id="accordion">
 				    <div class="panel panel-default">
 				      <div class="panel-heading">
 						<div class="recipeTable">
-							<div class="child">
-								<div class="ingredient">
-									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-								</div>
-							</div>
-							<div class="child">
-								<div class="ingredient">
-									<p>Breaded Zuchinni</p>
-								</div>
-							</div>
-							<div class="child">
-								<div class="ingredient">
-									<p id="measurement">10 Pieces</p>
-								</div>
-							</div>
-						</div>
-				      </div>
-				      <div id="collapse1" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
-				        <div class="panel-body">
-							Procedure text goes here
-						</div>
-						</div>
-						<div class="panel-heading">
-  						<div class="recipeTable">
-  							<div class="child">
-  								<div class="ingredient">
-  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p>Breaded Zuchinni</p>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p id="measurement">10 Pieces</p>
-  								</div>
-  							</div>
-  						</div>
-  				      </div>
-  				      <div id="collapse2" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
-  				        <div class="panel-body">
-  							Procedure text goes here
-  						</div>
-  						</div>
-						<div class="panel-heading">
-  						<div class="recipeTable">
-  							<div class="child">
-  								<div class="ingredient">
-  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p>Breaded Zuchinni</p>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p id="measurement">10 Pieces</p>
-  								</div>
-  							</div>
-  						</div>
-  				      </div>
-  				      <div id="collapse3" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
-  				        <div class="panel-body">
-  							Procedure text goes here
-  						</div>
-  						</div>
-						<div class="panel-heading">
-  						<div class="recipeTable">
-  							<div class="child">
-  								<div class="ingredient">
-  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p>Breaded Zuchinni</p>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p id="measurement">10 Pieces</p>
-  								</div>
-  							</div>
-  						</div>
-  				      </div>
-  				      <div id="collapse4" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
-  				        <div class="panel-body">
-  							Procedure text goes here
-  						</div>
-  						</div>
-						<div class="panel-heading">
-  						<div class="recipeTable">
-  							<div class="child">
-  								<div class="ingredient">
-  									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p>Breaded Zuchinni</p>
-  								</div>
-  							</div>
-  							<div class="child">
-  								<div class="ingredient">
-  									<p id="measurement">10 Pieces</p>
-  								</div>
-  							</div>
-  						</div>
-  				      </div>
-  				      <div id="collapse5" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
-  				        <div class="panel-body">
-  							Procedure text goes here
-  						</div>
-  						</div>
-						<!--Start new panel here-->
+
+				<div class="child">
+					<div class="ingredient">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide['id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="child">
+					<div class="ingredient">
+						<p><?php echo $slide['material01'];?></p>
+					</div>
+				</div>
+				<div class="child">
+					<div class="ingredient">
+						<p id="measurement"><?php echo $slide['measurement01'];?></p>
+					</div>
+				</div>
+			</div>
+	      </div>
+	      <div id="collapse<?php echo $slide['id'];?>" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+	        <div class="panel-body">
+				<?php echo $slide['procedure01'];?>
+			</div>
+			</div>
+
+						<!-- Start new panel here -->
 					</div>
 			    </div>
+				<div class="panel-group" id="accordion">
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+						<div class="recipeTable">
 
+				<div class="child">
+					<div class="ingredient">
+						 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide['id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="child">
+					<div class="ingredient">
+						<p><?php echo $slide['material02'];?></p>
+					</div>
+				</div>
+				<div class="child">
+					<div class="ingredient">
+						<p id="measurement"><?php echo $slide['measurement02'];?></p>
+					</div>
+				</div>
+			</div>
+	      </div>
+	      <div id="collapse<?php echo $slide['id'];?>" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
+	        <div class="panel-body">
+				<?php echo $slide['procedure02'];?>
+			</div>
+			</div>
+
+						<!-- Start new panel here -->
+					</div>
+			    </div>
+				<?php
+				// endwhile;
+				endif;
+				?>
 	</body>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
