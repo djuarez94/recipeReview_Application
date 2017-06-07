@@ -72,37 +72,7 @@
 						<!-- Start new panel here -->
 					</div>
 			    </div>
-				<div class="panel-group" id="accordion">
-				    <div class="panel panel-default">
-				      <div class="panel-heading">
-						<div class="recipeTable">
 
-				<div class="child">
-					<div class="ingredient">
-						 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide['id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<div class="child">
-					<div class="ingredient">
-						<p><?php echo $slide['material02'];?></p>
-					</div>
-				</div>
-				<div class="child">
-					<div class="ingredient">
-						<p id="measurement"><?php echo $slide['measurement02'];?></p>
-					</div>
-				</div>
-			</div>
-	      </div>
-	      <div id="collapse<?php echo $slide['id'];?>" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
-	        <div class="panel-body">
-				<?php echo $slide['procedure02'];?>
-			</div>
-			</div>
-
-						<!-- Start new panel here -->
-					</div>
-			    </div>
 				<?php
 				// endwhile;
 				endif;
