@@ -1,3 +1,19 @@
+<?php
+	if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+		$id = 1;
+		if (isset($_GET['id'])) {$id = $_GET['id'];}
+		//run the query
+		 $sql ="SELECT * FROM Recipe WHERE id = " . $id;
+		 $sql2 ="SELECT * FROM item WHERE recipe_id = " . $id;
+
+		 $result = mysqli_query($conn, $sql);
+		 $result2 = mysqli_query($conn, $sql2);
+
+		 $slide = mysqli_fetch_assoc($result);
+		 $slide2 = mysqli_fetch_assoc($result2);
+ ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,7 +35,7 @@
 					<nav class="buttonNav" aria-label="...">
 					  <ul class="pager">
 					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
-						<li class="miniHeader">Breaded Zuchinni</li>
+						<li class="miniHeader"><?php echo $slide['name']; ?></li>
 					    <li class="next"><a class="timeButton" style="padding-left:19px; padding-right:19px;"href="#"><img src="img/timer_icon_21px.png" alt=""></a></li>
 					  </ul>
 					</nav>
@@ -65,6 +81,10 @@
 					</form>
 				</div>
 			</div>
+			<?php
+			// endwhile;
+			endif;
+			?>
 	</body>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/script.js"></script>

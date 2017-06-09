@@ -11,7 +11,7 @@
 		<div class="container">
 			<header>
 				<a href="index.php">
-					<img class="logo" src="img/cookCheckLoogo_175px.png">
+					<img class="logo" src="<?php echo $row['img-url']; ?>">
 				</a>
 			</header>
 			<div class="search">
@@ -23,10 +23,24 @@
 			<div class="itemGallery">
 
 					<?php
+
+					//
+					// 	$id = 1;
+					// 	if (isset($_GET['id'])) {$id = $_GET['id'];}
+					// 	//run the query
+					// 	 $sql ="SELECT * FROM item WHERE id = " . $id;
+					//
+					// 	 $result = mysqli_query($conn, $sql);
+					//
+					// 	 $slide = mysqli_fetch_assoc($result);
+
 							if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
 
 								//run the query
-								 $sql ="SELECT * FROM mealRecipes";
+								 $sql = "SELECT Recipe.id, Recipe.name, Recipe.img_url, item.prepInstructions
+								 FROM item
+								 INNER JOIN Recipe
+								 ON Recipe.id = item.recipe_id";
 
 								 $result = mysqli_query($conn, $sql);
 
@@ -35,14 +49,14 @@
 
 						 ?>
 
-						
+
 						<div class="gallery">
 							<a href="recipeProfile.php?id=<?php echo $row['id']; ?>">
-						    	<img class="itemImg" src="img/zuchini_PH.jpg">
+						    	<img class="itemImg" src="<?php echo $row['img_url']; ?>">
 							</a>
 							<div class="desc">
 								<a href="recipeProfile.php?id=<?php echo $row['id']; ?>">
-									<p><?php echo $row['recipeName'] ?></p>
+									<p><?php echo $row['name'] ?></p>
 								</a></div>
 						</div>
 

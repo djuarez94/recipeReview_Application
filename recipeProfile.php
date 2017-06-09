@@ -4,11 +4,14 @@
 		$id = 1;
 		if (isset($_GET['id'])) {$id = $_GET['id'];}
 		//run the query
-		 $sql ="SELECT * FROM mealRecipes WHERE id = " . $id;
+		 $sql ="SELECT * FROM Recipe WHERE id = " . $id;
+		 $sql2 ="SELECT * FROM item WHERE recipe_id = " . $id;
 
 		 $result = mysqli_query($conn, $sql);
+		 $result2 = mysqli_query($conn, $sql2);
 
 		 $slide = mysqli_fetch_assoc($result);
+		 $slide2 = mysqli_fetch_assoc($result2);
  ?>
 
 <!DOCTYPE html>
@@ -33,8 +36,8 @@
 					  <ul class="pager">
 					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i>
 </a></li>
-						<li class="miniHeader"><?php echo $slide['recipeName']; ?></li>
-					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php">Test</a></li>
+						<li class="miniHeader"><?php echo $slide['name']; ?></li>
+					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php?id=<?php echo $slide['id']; ?>">Test</a></li>
 					  </ul>
 					</nav>
 				</div>
@@ -53,19 +56,19 @@
 				</div>
 				<div class="child">
 					<div class="ingredient">
-						<p><?php echo $slide['material01'];?></p>
+						<p><?php echo $slide2['material'];?></p>
 					</div>
 				</div>
 				<div class="child">
 					<div class="ingredient">
-						<p id="measurement"><?php echo $slide['measurement01'];?></p>
+						<p id="measurement"><?php echo $slide2['measurement'];?></p>
 					</div>
 				</div>
 			</div>
 	      </div>
 	      <div id="collapse<?php echo $slide['id'];?>" class="panel-collapse collapse"><!--Add the "in" class here if you want accordion to stay open on page load-->
 	        <div class="panel-body">
-				<?php echo $slide['procedure01'];?>
+				<?php echo $slide2['prepInstructions'];?>
 			</div>
 			</div>
 
