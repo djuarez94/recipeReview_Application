@@ -37,10 +37,10 @@
 							if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
 
 								//run the query
-								 $sql = "SELECT Recipe.id, Recipe.name, Recipe.img_url, item.prepInstructions
-								 FROM item
-								 INNER JOIN Recipe
-								 ON Recipe.id = item.recipe_id";
+								 $sql = "SELECT Recipes.id, Recipes.name, Recipes.img_url, Items.prep_instructions
+								 FROM Items
+								 INNER JOIN Recipes
+								 ON Recipes.id = Items.recipe_id";
 
 								 $result = mysqli_query($conn, $sql);
 
