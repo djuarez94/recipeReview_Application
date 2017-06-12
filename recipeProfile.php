@@ -5,17 +5,24 @@
 
 		if (isset($_GET['id'])) {$id = $_GET['id'];}
 		//run the query
-		 $sql ="SELECT * FROM Recipes WHERE id = " . $id;
-		 $sql2 ="SELECT * FROM Items WHERE recipe_id = " . $id;
+		//  $sql ="SELECT * FROM Recipes WHERE id = " . $id;
+		 $sql = "SELECT * FROM Items INNER JOIN Recipes ON Recipes.id = Items.recipe_id  WHERE recipe_id = " . $id;
+
 		//  $sql2 ="SELECT Recipes.id, Recipes.name, Items.img_url, Items.prep_instructions, Items.measurements, Items.materials FROM Items INNER JOIN Recipes ON Recipes.id = Items.recipe_id";
 
+		$i=0; // this refer every row..now its 0
+		while ($row = mysqli_fetch_array($sql))
+		{
+		    echo "<p> " . $row['name'] . " </p>";
+		    $i++;
+		}
 
-		 $result = mysqli_query($conn, $sql);
-		 $result2 = mysqli_query($conn, $sql2);
-
-
-		 $slide = mysqli_fetch_assoc($result);
-		 $slide2 = mysqli_fetch_assoc($result2);
+		//  $result = mysqli_query($conn, $sql);
+		 //
+		 //
+		 //
+		//  $slide = mysqli_fetch_assoc($result);
+		// while($slide = mysqli_fetch_assoc($result));
 
  ?>
 
@@ -55,57 +62,30 @@
 							<div class="recipeTable">
 								<div class="child">
 									<div class="ingredient">
-										 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide2['id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+										 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide['recipe_id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
 									</div>
 								</div>
 								<div class="child">
 									<div class="ingredient">
-										<p><?php echo $slide2['materials'];?></p>
+										<p><?php echo $slide['materials'];?></p>
 									</div>
 								</div>
 								<div class="child">
 									<div class="ingredient">
-										<p id="measurement"><?php echo $slide2['measurements'];?></p>
+										<p id="measurement"><?php echo $slide['measurements'];?></p>
 									</div>
 								</div>
 							</div>
 	      				</div>
-						    <div id="collapse<?php echo $slide2['id'];?>" class="panel-collapse collapse">
+						    <div id="collapse<?php echo $slide['recipe_id'];?>" class="panel-collapse collapse">
 								<!--Add the "in" class here if you want accordion to stay open on page load-->
-							    
-									<?php echo $slide2['prep_instructions'];?>
-								
+
+									<?php echo $slide['prep_instructions'];?>
+
 							</div>
 
 				<!-- Panel Starts here -->
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="recipeTable">
-							<div class="child">
-								<div class="ingredient">
-									 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide2['recipe_id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
-								</div>
-							</div>
-							<div class="child">
-								<div class="ingredient">
-									<p><?php echo $slide3['material_02'];?></p>
-								</div>
-							</div>
-							<div class="child">
-								<div class="ingredient">
-									<p id="measurement"><?php echo $slide3['measurement_02'];?></p>
-								</div>
-							</div>
-						</div>
-					</div>
-						<div id="collapse<?php echo $slide3['recipe_id'];?>" class="panel-collapse collapse">
-							<!--Add the "in" class here if you want accordion to stay open on page load-->
-							<div class="panel-body">
-								<div class="panel-body">
-									<?php echo $slide3['prepInstruction_02'];?>
-								</div>
-							</div>
-						</div>
+
 			<!-- Panel Ends here -->
 
 				</div>
