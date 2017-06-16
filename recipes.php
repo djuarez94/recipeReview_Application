@@ -1,3 +1,15 @@
+<?php if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+	$id = 1;
+	if (isset($_GET['id'])) {$id = $_GET['id'];}
+	//run the query
+	 $salad_sql = "SELECT * FROM salads_recipes INNER JOIN Prep_Positions ON  salads_recipes.position_id = Prep_Positions.id WHERE position_id = " . $id;
+
+	 $result = mysqli_query($conn, $salad_sql);
+
+	 while ($row2 = mysqli_fetch_assoc($result)):
+	  ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,51 +23,38 @@
 		<div class="container">
 			<header>
 				<a href="index.php">
-					<img class="logo" src="<?php echo $row['img-url']; ?>">
+					<img class="logo" src="img/cookCheckLoogo_175px.png">
 				</a>
 			</header>
 			<div class="search">
-				<h1 class="positionName">Salad PrepCook</h1>
+				<h1 class="positionName"><?php echo $row2['position_name']; ?> PrepCook</h1>
 				<i style="font-size: 2em;" class="fa fa-search" aria-hidden="true"></i>
 				<input class="searchPos" type="text" name="" value="">
 			</div>
 
 			<div class="itemGallery">
+				<?php
+				$id2 = 1;
+				if (isset($_GET['id'])) {$id2 = $_GET['id'];}
+				//run the query
+				 $salad_sql2 = "SELECT * FROM salads_recipes WHERE position_id =". $id;
 
-					<?php
-
-					//
-					// 	$id = 1;
-					// 	if (isset($_GET['id'])) {$id = $_GET['id'];}
-					// 	//run the query
-					// 	 $sql ="SELECT * FROM item WHERE id = " . $id;
-					//
-					// 	 $result = mysqli_query($conn, $sql);
-					//
-					// 	 $slide = mysqli_fetch_assoc($result);
-
-							if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
-
-								//run the query
-								 $sql = "SELECT Recipes.id, Recipes.name, Recipes.img_url FROM Items INNER JOIN Recipes ON Recipes.id = Items.recipe_id ";
-
-								 $result = mysqli_query($conn, $sql);
-
-								 //loop the results
-								 while ($row = mysqli_fetch_assoc($result)):
-
-						 ?>
-
-
-						<div class="gallery">
-							<a href="recipeProfile.php?id=<?php echo $row['id']; ?>">
-						    	<img class="itemImg" src="<?php echo $row['img_url']; ?>">
-							</a>
-							<div class="desc">
-								<a href="recipeProfile.php?id=<?php echo $row['id']; ?>">
-									<p><?php echo $row['name'] ?></p>
-								</a></div>
-						</div>
+				 $result = mysqli_query($conn, $salad_sql2);
+					//  $slide = mysqli_fetch_assoc($result);
+					while ($row2 = mysqli_fetch_assoc($result)) {
+					   echo "<div class=\"gallery\">
+								   <a href=\"recipeProfile.php?id=".$row2['id']."\">
+									   <img class=\"itemImg\" src=\"".$row2['img_url']."\">
+								   </a>
+									   <div class=\"desc\">
+										   <a href=\"recipeProfile.php?id=".$row2['id']."\">
+											   <p>".$row2['recipe_name']."</p>
+										   </a>
+									   </div>
+							   </div>";
+						$id2++;
+					}
+					 ?>
 
 					<?php
 					endwhile;

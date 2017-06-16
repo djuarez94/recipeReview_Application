@@ -1,31 +1,3 @@
-<?php
-	if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
-
-		$id = 1;
-
-		if (isset($_GET['id'])) {$id = $_GET['id'];}
-		//run the query
-		//  $sql ="SELECT * FROM Recipes WHERE id = " . $id;
-		 $sql = "SELECT * FROM Items INNER JOIN Recipes ON Recipes.id = Items.recipe_id  WHERE recipe_id = " . $id;
-
-		//  $sql2 ="SELECT Recipes.id, Recipes.name, Items.img_url, Items.prep_instructions, Items.measurements, Items.materials FROM Items INNER JOIN Recipes ON Recipes.id = Items.recipe_id";
-
-		$i=0; // this refer every row..now its 0
-		while ($row = mysqli_fetch_array($sql))
-		{
-		    echo "<p> " . $row['name'] . " </p>";
-		    $i++;
-		}
-
-		//  $result = mysqli_query($conn, $sql);
-		 //
-		 //
-		 //
-		//  $slide = mysqli_fetch_assoc($result);
-		// while($slide = mysqli_fetch_assoc($result));
-
- ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -45,42 +17,74 @@
 			<div class="container-fluid">
 				<div class="miniNav">
 					<nav class="buttonNav" aria-label="...">
+						<?php
+						if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+
+							if (isset($_GET['id'])) {$id = $_GET['id'];}
+							//run the query
+							 $sql ="SELECT * FROM salads_recipes WHERE id = " . $id;
+
+							 $result = mysqli_query($conn, $sql);
+
+							 $slide = mysqli_fetch_assoc($result);
+						 ?>
 					  <ul class="pager">
 					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i>
 						</a></li>
-						<li class="miniHeader"><?php echo $slide['name']; ?></li>
+						<li class="miniHeader"><?php echo $slide['recipe_name']; ?></li>
 					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php?id=<?php echo $slide['id']; ?>">Test</a></li>
 					  </ul>
 					</nav>
 			</div>
+			<?php
+			// endwhile;
+			endif;
+			?>
 				<div class="recipe">
 					<img class ="profilePhoto" src="img/zuchini_PH.jpg" width="170px">
 
 				<div class="panel-group" id="accordion">
+					<?php
+						if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+							$id = 1;
+
+							if (isset($_GET['id'])) {$id = $_GET['id'];}
+							//run the query
+							//  $sql ="SELECT * FROM Recipes WHERE id = " . $id;
+							 $salad_sql = "SELECT * FROM salad_items WHERE recipe_id =". $id;
+
+							 $result = mysqli_query($conn, $salad_sql);
+
+							 while ($row = mysqli_fetch_assoc($result)):
+
+
+					 ?>
 					<div class="panel panel-default">
 				    	<div class="panel-heading">
 							<div class="recipeTable">
 								<div class="child">
 									<div class="ingredient">
-										 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $slide['recipe_id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
+										 <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $row['id'];?>"><i style="font-size:20px;" id="downArrow" class="fa fa-caret-down" aria-hidden="true"></i></a>
 									</div>
 								</div>
 								<div class="child">
 									<div class="ingredient">
-										<p><?php echo $slide['materials'];?></p>
+										<p><?php echo $row['materials'];?></p>
 									</div>
 								</div>
 								<div class="child">
 									<div class="ingredient">
-										<p id="measurement"><?php echo $slide['measurements'];?></p>
+										<p id="measurement"><?php echo $row['measurements'];?></p>
 									</div>
 								</div>
 							</div>
 	      				</div>
-						    <div id="collapse<?php echo $slide['recipe_id'];?>" class="panel-collapse collapse">
+						    <div id="collapse<?php echo $row['id'];?>" class="panel-collapse collapse">
 								<!--Add the "in" class here if you want accordion to stay open on page load-->
 
-									<?php echo $slide['prep_instructions'];?>
+									<?php echo $row['prep_instructions'];?>
 
 							</div>
 
@@ -91,7 +95,7 @@
 				</div>
 
 				<?php
-				// endwhile;
+				endwhile;
 				endif;
 				?>
 	</body>

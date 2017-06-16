@@ -15,17 +15,30 @@
 			</header>
 				<div class="positions">
 					<nav>
-						<a href="recipes.php">Salads</a>
-						<a href="#">Slicer</a>
-						<a href="#">Oven</a>
-						<a href="#">Production</a>
-						<a href="#">Salsa</a>
+						<?php
+						if ($conn = mysqli_connect('localhost', 'root', 'root', 'cookCheck')):
+
+							$id = 1;
+							if (isset($_GET['id'])) {$id = $_GET['id'];}
+							//run the query
+							 $sql ="SELECT * FROM Prep_Positions";
+
+							 $result = mysqli_query($conn, $sql);
+
+							//  $slide = mysqli_fetch_assoc($result);
+							 while ($row = mysqli_fetch_assoc($result)) {
+								 echo "<a href=\"recipes.php?id=".$row['id']."\">".$row['position_name']."</a>";
+							 }
+							 ?>
 					</nav>
 				</div>
 				<div class="copyright">
 					<p>	&copy; <?php echo date('Y'); ?> Recipe Viewer.<br> All rights reserved.</p>
 				</div>
 		</div>
-
+		<?php
+		// endwhile;
+		endif;
+		?>
 	</body>
 </html>
