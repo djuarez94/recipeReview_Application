@@ -22,15 +22,20 @@
 
 
 							if (isset($_GET['id'])) {$id = $_GET['id'];}
+
+							$position_sql ="SELECT * FROM Prep_Positions";
+							$result2 = mysqli_query($conn, $position_sql);
+							$row = mysqli_fetch_assoc($result2);
+
 							//run the query
-							 $sql ="SELECT * FROM salads_recipes WHERE id = " . $id;
+							 $sql ="SELECT * FROM slicer_recipes WHERE id = " . $id;
 
 							 $result = mysqli_query($conn, $sql);
 
 							 $slide = mysqli_fetch_assoc($result);
 						 ?>
 					  <ul class="pager">
-					    <li class="previous"><a href="recipes.php"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i>
+					    <li class="previous"><a href="Slicer_recipes.php?id=2"><i style="font-size:20px; padding-left:5px;" class="fa fa-arrow-left" aria-hidden="true"></i>
 						</a></li>
 						<li class="miniHeader"><?php echo $slide['recipe_name']; ?></li>
 					    <li class="next"><a style="padding-left:19px; padding-right:19px;"href="testItem.php?id=<?php echo $slide['id']; ?>">Test</a></li>
@@ -53,7 +58,7 @@
 							if (isset($_GET['id'])) {$id = $_GET['id'];}
 							//run the query
 							//  $sql ="SELECT * FROM Recipes WHERE id = " . $id;
-							 $salad_sql = "SELECT * FROM salad_items WHERE recipe_id =". $id;
+							 $salad_sql = "SELECT * FROM slicer_items WHERE recipe_id =". $id;
 
 							 $result = mysqli_query($conn, $salad_sql);
 

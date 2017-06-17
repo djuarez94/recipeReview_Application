@@ -27,7 +27,7 @@
 
 							//  $slide = mysqli_fetch_assoc($result);
 							 while ($row = mysqli_fetch_assoc($result)) {
-								 echo "<a href=\"recipes.php?id=".$row['id']."\">".$row['position_name']."</a>";
+								 echo "<a href=\"".$row['position_name']."_recipes.php?id=".$row['id']."\">".$row['position_name']."</a>";
 							 }
 							 ?>
 					</nav>

@@ -5,6 +5,7 @@
 	//run the query
 	 $salad_sql = "SELECT * FROM salads_recipes INNER JOIN Prep_Positions ON  salads_recipes.position_id = Prep_Positions.id WHERE position_id = " . $id;
 
+
 	 $result = mysqli_query($conn, $salad_sql);
 
 	 while ($row2 = mysqli_fetch_assoc($result)):
@@ -38,16 +39,19 @@
 				if (isset($_GET['id'])) {$id2 = $_GET['id'];}
 				//run the query
 				 $salad_sql2 = "SELECT * FROM salads_recipes WHERE position_id =". $id;
+				 $position_sql ="SELECT * FROM Prep_Positions";
 
 				 $result = mysqli_query($conn, $salad_sql2);
+				 $result2 = mysqli_query($conn, $position_sql);
+				 $row = mysqli_fetch_assoc($result2);
 					//  $slide = mysqli_fetch_assoc($result);
 					while ($row2 = mysqli_fetch_assoc($result)) {
 					   echo "<div class=\"gallery\">
-								   <a href=\"recipeProfile.php?id=".$row2['id']."\">
+								   <a href=\"".$row['position_name']."_recipeProfile.php?id=".$row2['id']."\">
 									   <img class=\"itemImg\" src=\"".$row2['img_url']."\">
 								   </a>
 									   <div class=\"desc\">
-										   <a href=\"recipeProfile.php?id=".$row2['id']."\">
+										   <a href=\"".$row['position_name']."_recipeProfile.php?id=".$row2['id']."\">
 											   <p>".$row2['recipe_name']."</p>
 										   </a>
 									   </div>
